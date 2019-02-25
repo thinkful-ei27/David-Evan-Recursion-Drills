@@ -43,16 +43,26 @@
 
 // console.log(triangularNumber(4));
 
-const stringSplit = function (string, separator) {
+// const stringSplit = function (string, separator) {
 
-  const index = string.indexOf(separator)
+//   const index = string.indexOf(separator)
 
-  if (index < 0) {
-    return [string]
-  } else {
-    return [string.slice(0, index), ...stringSplit(string.slice(index + 1), separator)]
-  }
+//   if (index < 0) {
+//     return [string]
+//   } else {
+//     return [string.slice(0, index), ...stringSplit(string.slice(index + 1), separator)]
+//   }
 
-}
+// }
 
-console.log(stringSplit("Hiigiigi", "g"))
+// console.log(stringSplit("Hiigiigi", "g"))
+
+//factorial(5) -> 5 * 4 * 3 * 2 * 1
+
+// const factorial = num => {
+//   if (num === 1) return 1;
+
+//   return num * factorial(num - 1);
+// };
+
+// console.log(factorial(5));
