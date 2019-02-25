@@ -18,14 +18,27 @@
 // };
 // console.log(arrDouble([1, 2, 3]));
 // const reverseString = function (string) {
-  
+
 //   if (string == "") {
 //     return ""
 //   }
 
 //   let firstChar = string[0]
 //   return reverseString(string.slice(1)) + firstChar
-  
+
 // }
 
 // console.log(reverseString("abcdefg"));
+
+//     *
+//   *   *
+// *   *   *
+// *   *    *    *
+
+const triangularNumber = num => {
+  if (num === 1) return 1;
+
+  return num + triangularNumber(num - 1);
+};
+
+console.log(triangularNumber(4));
