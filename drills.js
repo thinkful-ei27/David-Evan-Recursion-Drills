@@ -66,3 +66,15 @@
 // };
 
 // console.log(factorial(5));
+
+// const fibonacci = function(fibIndex) {
+
+//   if (fibIndex < 3) {
+//     return 1
+//   }
+//   return fibonacci(fibIndex - 1) + fibonacci(fibIndex - 2)
+
+// }
+
+// console.log(fibonacci(13))
+
