@@ -35,10 +35,24 @@
 // *   *   *
 // *   *    *    *
 
-const triangularNumber = num => {
-  if (num === 1) return 1;
+// const triangularNumber = num => {
+//   if (num === 1) return 1;
 
-  return num + triangularNumber(num - 1);
-};
+//   return num + triangularNumber(num - 1);
+// };
 
-console.log(triangularNumber(4));
+// console.log(triangularNumber(4));
+
+const stringSplit = function (string, separator) {
+
+  const index = string.indexOf(separator)
+
+  if (index < 0) {
+    return [string]
+  } else {
+    return [string.slice(0, index), ...stringSplit(string.slice(index + 1), separator)]
+  }
+
+}
+
+console.log(stringSplit("Hiigiigi", "g"))
