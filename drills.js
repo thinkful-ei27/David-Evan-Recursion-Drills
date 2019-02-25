@@ -8,12 +8,24 @@
 //   countSheep(sheep - 1);
 // };
 // countSheep(5);
+///////////////////////////////////////////////////////////////////////
+// const arrDouble = arr => {
+//   if (!arr.length) {
+//     return [];
+//   }
 
-const arrDouble = arr => {
-  if (!arr.length) {
-    return [];
-  }
+//   return [arr[0] * 2, ...arrDouble(arr.slice(1))];
+// };
+// console.log(arrDouble([1, 2, 3]));
+// const reverseString = function (string) {
+  
+//   if (string == "") {
+//     return ""
+//   }
 
-  return [arr[0] * 2, ...arrDouble(arr.slice(1))];
-};
-console.log(arrDouble([1, 2, 3]));
+//   let firstChar = string[0]
+//   return reverseString(string.slice(1)) + firstChar
+  
+// }
+
+// console.log(reverseString("abcdefg"));
