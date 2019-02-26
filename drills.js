@@ -78,3 +78,43 @@
 
 // console.log(fibonacci(13))
 
+const anagram = str => {
+  const results = [];
+  if (str.length === 1) {
+    return str;
+  }
+
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+    const remainder = str.replace(char, '');
+    const result = anagram(remainder);
+    for (let j = 0; j < result.length; j++) {
+      results.push(char + result[j]);
+    }
+  }
+  return results;
+};
+
+console.log(anagram('east', 'east'));
+//east
+//
+
+const animalHierarchy = [
+  { id: 'Animals', parent: null },
+  { id: 'Mammals', parent: 'Animals' },
+  { id: 'Dogs', parent: 'Mammals' },
+  { id: 'Cats', parent: 'Mammals' },
+  { id: 'Golden Retriever', parent: 'Dogs' },
+  { id: 'Husky', parent: 'Dogs' },
+  { id: 'Bengal', parent: 'Cats' }
+];
+
+// ==============================
+function traverse(animalHierarchy, parent) {
+  let node = {};
+  animalHierarchy
+    .filter(item => item.parent === parent)
+    .forEach(item => (node[item.id] = traverse(animalHierarchy, item.id)));
+  return node;
+}
+console.log(traverse(animalHierarchy, null));
